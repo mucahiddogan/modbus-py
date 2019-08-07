@@ -13,7 +13,8 @@ import numpy as np
 from pyModbusTCP.client import ModbusClient
 import time
 
-SERVER_HOST = "ipadresiii"
+#DOLDUR
+SERVER_HOST = "REMOTEIPADRESI"
 SERVER_PORT = 502
 
 c = ModbusClient()
