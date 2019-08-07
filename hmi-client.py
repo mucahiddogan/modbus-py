@@ -13,7 +13,6 @@ import numpy as np
 from pyModbusTCP.client import ModbusClient
 import time
 
-#DOLDUR
 SERVER_HOST = "REMOTEIPADRESI"
 SERVER_PORT = 502
 
@@ -54,8 +53,10 @@ def animate(i):
     reg = reg.replace("[", "").replace("]", "")
     veri.write(reg)
     veri.write("\n")
-    graph_data = open('veri.txt', 'r').read()
-    lines = graph_data.split('\n')
+    graph_data = open('veri.txt', 'r').readlines()
+    #lines = graph_data.split('\n')
+    lines = graph_data[-15:]
+    print(lines)
     xs = []
     ys = []
     for line in lines:
